@@ -34,6 +34,7 @@ public class Main extends JFrame {
 	private JPasswordField passwordFieldContraseña;
 
 	Usuario usuario = new Usuario("ikaslea","1234");
+	String nombreUsuario = usuario.getUsuario();
 	
 	/**
 	 * Launch the application.
@@ -78,7 +79,7 @@ public class Main extends JFrame {
 					abrirVentanaLoginCorrecto();
 					dispose();
 				} else {
-					JOptionPane.showMessageDialog(getContentPane(), "ERROR usuario no permitido");
+					JOptionPane.showMessageDialog(getContentPane(), "ERROR usuario no permitido", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -128,7 +129,7 @@ public class Main extends JFrame {
 	}
 	
 	protected void abrirVentanaLoginCorrecto() {
-		Comprobacion comprobacion = new Comprobacion();
+		Comprobacion comprobacion = new Comprobacion(nombreUsuario);
 		comprobacion.setVisible(true);
 	}
 }

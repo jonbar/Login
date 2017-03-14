@@ -13,34 +13,17 @@ public class Comprobacion extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	
-	public Comprobacion(Main main, boolean b) {
-		// TODO Auto-generated constructor stub
-	}
-	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			Comprobacion dialog = new Comprobacion();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	/**
 	 * Create the dialog.
 	 */
-	public Comprobacion() {
+	public Comprobacion(String usuario) {
 		setBounds(100, 100, 227, 140);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setLayout(new FlowLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		{
-			JLabel lblOngiEtorri = new JLabel("Ongi Etorri ");
+			JLabel lblOngiEtorri = new JLabel("Ongi Etorri " + usuario);
 			contentPanel.add(lblOngiEtorri);
 		}
 		{

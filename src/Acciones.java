@@ -59,7 +59,7 @@ public class Acciones extends JDialog {
 		JButton btnAñadirAlumno = new JButton("A\u00F1adir alumno");
 		btnAñadirAlumno.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO
+				abrirVentanaInsertarUsuario();
 			}
 		});
 		
@@ -129,5 +129,10 @@ public class Acciones extends JDialog {
 	
 	public void eliminar(int i){
 		this.comboBoxAlumnos.removeItemAt(i);
+	}
+	
+	protected void abrirVentanaInsertarUsuario() {
+		EntradaDatos crearUsuario = new EntradaDatos(this, true);
+		crearUsuario.setVisible(true);
 	}
 }
