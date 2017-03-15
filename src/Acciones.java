@@ -135,4 +135,8 @@ public class Acciones extends JDialog {
 		EntradaDatos crearUsuario = new EntradaDatos(this, true);
 		crearUsuario.setVisible(true);
 	}
+	
+	public void aniadir(Alumno alumno){
+		this.comboBoxAlumnos.addItem(alumno.getNumMatricula() + " " + alumno.getNombre() + "" + alumno.getApellido() + ":" + alumno.getEdad() );
+	}
 }
